@@ -2,12 +2,23 @@ ul.menu{
     display: inline;
 }
 li.menu{
-    display: inline;
+    display: inline-block;
+    margin-right: 3px;
+    padding: 4px;
+    border: 1px inset darkgray;
+    background: rgb(181, 183, 187);
 }
 li.menu-selected{
     display: inline;
     color: blue;
 }
+
 .menu li:hover{
     cursor: pointer;
+    border: 1px outset darkgray;
+    -webkit-transform: scale(1.1); /* Для Safari и Chrome */
+    -moz-transform: scale(1.1); /* Для Firefox */
+    -o-transform: scale(1.1); /* Для Opera */
+    -ms-transform: scale(1.1); /* Для IE */
+    transform: scale(1.1); /* CSS3 */
 }

@@ -28,13 +28,20 @@ function selectEn(){
     st1.innerHTML = "Stacks";
     var st2 = document.getElementById("st2");
     st2.innerHTML = "Queues";
-
+    var h1 = document.getElementById("head1");
+    h1.innerHTML = "Date structures";
+    var h2 = document.getElementById("infoTitleH2");
+    h2.innerHTML = "Data structure - stack";
 }
 function selectUa(){
     var st1 = document.getElementById("st1");
     st1.innerHTML = "Стеки";
     var st2 = document.getElementById("st2");
     st2.innerHTML = "Черги";
+    var h1 = document.getElementById("head1");
+    h1.innerHTML = "Структури диних";
+    var h2 = document.getElementById("infoTitleH2");
+    h2.innerHTML = "Структура даних - стек";
 }
 
 function selectStruct(sStruct){
