@@ -1,3 +1,13 @@
-ul .menu{
+ul.menu{
     display: inline;
+}
+li.menu{
+    display: inline;
+}
+li.menu-selected{
+    display: inline;
+    color: blue;
+}
+.menu li:hover{
+    cursor: pointer;
 }
