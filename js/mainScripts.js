@@ -22,7 +22,7 @@ function selectLanguage(tLang){
             console.log("lngUa:"+lngUa.className);
             break;
     }
-    selectStruct("stack");
+    //selectStruct("stack");
 }
 function selectEn(){
     localStorage.setItem("lang", "en");
@@ -32,32 +32,53 @@ function selectEn(){
     st2.innerHTML = "Queues";
     var h1 = document.getElementById("head1");
     h1.innerHTML = "Date structures";
-    var h2 = document.getElementById("infoTitleH2");
+ /*   var h2 = document.getElementById("infoTitleH2");
     h2.innerHTML = "Data structure - stack";
+*/
 }
 function selectUa(){
     localStorage.setItem("lang", "ua");
+
     var st1 = document.getElementById("st1");
     st1.innerHTML = "Стеки";
     var st2 = document.getElementById("st2");
     st2.innerHTML = "Черги";
     var h1 = document.getElementById("head1");
     h1.innerHTML = "Структури диних";
-    var h2 = document.getElementById("infoTitleH2");
+  /*  var h2 = document.getElementById("infoTitleH2");
     h2.innerHTML = "Структура даних - стек";
+*/
 }
 
 function uaContent(sStruct){
-
-}
-function enContent(sStruct){
+    var iTitle = document.getElementById("infoTitleH2");
+    var iContent = document.getElementById("infoContent");
     switch(sStruct){
         case "stack":
+            iTitle.innerHTML = "Структура даних стек";
+            iContent.innerHTML = "Стек - це";
             break;
         case "queue":
+            iTitle.innerHTML = "Черга";
+            iContent.innerHTML = "Черга - це";
+
             break;
     }
+}
+function enContent(sStruct){
+    var iTitle = document.getElementById("infoTitle");
+    var iContent = document.getElementById("infoContent");
+    switch(sStruct){
+        case "stack":
+            iTitle.innerHTML = "Data structure - stack";
+            iContent.innerHTML = "Stack it is";
+            break;
+        case "queue":
+            iTitle.innerHTML = "Queue";
+            iContent.innerHTML = "Queue it is";
 
+            break;
+    }
 }
 function errContent(){
     console.log("error content");
@@ -65,10 +86,11 @@ function errContent(){
 function selectStruct(sStruct){
     var valueLang = localStorage.getItem("lang");
     console.log("selected: "+valueLang);
+    localStorage.setItem("content",sStruct);
     if(valueLang==="en"){
-
+        enContent(sStruct);
     } else if (valueLang==="ua"){
-
+        uaContent(sStruct);
     }else{
         errContent();
     }
