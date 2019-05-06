@@ -24,6 +24,7 @@ function selectLanguage(tLang){
     }
 }
 function selectEn(){
+    localStorage.setItem("lang", "en");
     var st1 = document.getElementById("st1");
     st1.innerHTML = "Stacks";
     var st2 = document.getElementById("st2");
@@ -34,6 +35,7 @@ function selectEn(){
     h2.innerHTML = "Data structure - stack";
 }
 function selectUa(){
+    localStorage.setItem("lang", "ua");
     var st1 = document.getElementById("st1");
     st1.innerHTML = "Стеки";
     var st2 = document.getElementById("st2");
@@ -45,5 +47,7 @@ function selectUa(){
 }
 
 function selectStruct(sStruct){
+    var valueLang = localStorage.getItem("lang");
+    console.log("selected: "+valueLang);
 
 }
