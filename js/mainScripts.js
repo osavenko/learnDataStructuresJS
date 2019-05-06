@@ -1,3 +1,8 @@
+var stackTitleEn = "Data structure - stack";
+var stackTitleUa = "Структура даних - стек";
+var stackInfoEn = "A stack is an ordered collection of items that follows the last in, first out(LIFO) principle.";
+var stackInfoUa = "Стек - це впорядкована колекція елементів, яка дотримується принципу LIFO.";
+
 function selectLanguage(tLang){
     var lngEn = document.getElementById("lang1");
     var lngUa = document.getElementById("lang2");
@@ -33,9 +38,6 @@ function selectEn(){
     st2.innerHTML = "Queues";
     var h1 = document.getElementById("head1");
     h1.innerHTML = "Date structures";
- /*   var h2 = document.getElementById("infoTitleH2");
-    h2.innerHTML = "Data structure - stack";
-*/
 }
 function selectUa(){
     localStorage.setItem("lang", "ua");
@@ -46,9 +48,6 @@ function selectUa(){
     st2.innerHTML = "Черги";
     var h1 = document.getElementById("head1");
     h1.innerHTML = "Структури диних";
-  /*  var h2 = document.getElementById("infoTitleH2");
-    h2.innerHTML = "Структура даних - стек";
-*/
 }
 
 function uaContent(sStruct){
@@ -57,8 +56,8 @@ function uaContent(sStruct){
     console.log("ch:  ----------------------->"+sStruct);
     switch(sStruct){
         case "stack":
-            iTitle.innerHTML = "Структура даних стек";
-            iContent.innerHTML = "Стек - це";
+            iTitle.innerHTML = stackTitleUa;
+            iContent.innerHTML = stackInfoUa;
             break;
         case "queue":
             iTitle.innerHTML = "Черга";
@@ -72,8 +71,8 @@ function enContent(sStruct){
     var iContent = document.getElementById("infoContent");
     switch(sStruct){
         case "stack":
-            iTitle.innerHTML = "Data structure - stack";
-            iContent.innerHTML = "Stack it is";
+            iTitle.innerHTML = stackTitleEn;
+            iContent.innerHTML = stackInfoEn;
             break;
         case "queue":
             iTitle.innerHTML = "Queue";
