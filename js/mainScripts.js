@@ -22,6 +22,7 @@ function selectLanguage(tLang){
             console.log("lngUa:"+lngUa.className);
             break;
     }
+    document.writeln("zzzz^"+localStorage.getItem("content"));
     selectStruct(localStorage.getItem("content"));
 }
 function selectEn(){
@@ -51,30 +52,30 @@ function selectUa(){
 }
 
 function uaContent(sStruct){
-    var iTitle = document.getElementById("infoTitleH2");
+    var iTitle = document.getElementById("infoTitleValue");
     var iContent = document.getElementById("infoContent");
     switch(sStruct){
         case "stack":
-            //iTitle.innerHTML = "Структура даних стек";
+            iTitle.innerHTML = "Структура даних стек";
             iContent.innerHTML = "Стек - це";
             break;
         case "queue":
-            //iTitle.innerHTML = "Черга";
+            iTitle.innerHTML = "Черга";
             iContent.innerHTML = "Черга - це";
 
             break;
     }
 }
 function enContent(sStruct){
-    var iTitle = document.getElementById("infoTitle");
+    var iTitle = document.getElementById("infoTitleValue");
     var iContent = document.getElementById("infoContent");
     switch(sStruct){
         case "stack":
-            //iTitle.innerHTML = "Data structure - stack";
+            iTitle.innerHTML = "Data structure - stack";
             iContent.innerHTML = "Stack it is";
             break;
         case "queue":
-            //iTitle.innerHTML = "Queue";
+            iTitle.innerHTML = "Queue";
             iContent.innerHTML = "Queue it is";
 
             break;
