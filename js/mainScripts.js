@@ -22,7 +22,7 @@ function selectLanguage(tLang){
             console.log("lngUa:"+lngUa.className);
             break;
     }
-    //selectStruct("stack");
+    selectStruct(localStorage.getItem("content"));
 }
 function selectEn(){
     localStorage.setItem("lang", "en");
@@ -55,11 +55,11 @@ function uaContent(sStruct){
     var iContent = document.getElementById("infoContent");
     switch(sStruct){
         case "stack":
-            iTitle.innerHTML = "Структура даних стек";
+            //iTitle.innerHTML = "Структура даних стек";
             iContent.innerHTML = "Стек - це";
             break;
         case "queue":
-            iTitle.innerHTML = "Черга";
+            //iTitle.innerHTML = "Черга";
             iContent.innerHTML = "Черга - це";
 
             break;
@@ -70,11 +70,11 @@ function enContent(sStruct){
     var iContent = document.getElementById("infoContent");
     switch(sStruct){
         case "stack":
-            iTitle.innerHTML = "Data structure - stack";
+            //iTitle.innerHTML = "Data structure - stack";
             iContent.innerHTML = "Stack it is";
             break;
         case "queue":
-            iTitle.innerHTML = "Queue";
+            //iTitle.innerHTML = "Queue";
             iContent.innerHTML = "Queue it is";
 
             break;
@@ -85,8 +85,23 @@ function errContent(){
 }
 function selectStruct(sStruct){
     var valueLang = localStorage.getItem("lang");
+    var struct1 = document.getElementById("struct1");
+    var struct2 = document.getElementById("struct2");
+    
     console.log("selected: "+valueLang);
     localStorage.setItem("content",sStruct);
+    switch (sStruct){
+        case "stack":
+            struct1.classList.add("menu-selected");
+            struct2.classList.remove("menu-selected")
+
+            break;
+        case "queue":
+            struct2.classList.add("menu-selected");
+            struct1.classList.remove("menu-selected")
+
+            break;
+    }
     if(valueLang==="en"){
         enContent(sStruct);
     } else if (valueLang==="ua"){
