@@ -14,8 +14,8 @@
         <h1 id="head1">Data structures</h1>
         <div id="structures">
             <ul class="menu">
-                <li id="struct1" class="menu menu-selected"><span id="st1" onclick="selectStruct(1)">Stacks</a></li>
-                <li id="struct2" class="menu"><span id="st2" onclick="selectStruct(2)">Queues</a></li>
+                <li id="struct1" class="menu menu-selected"><span id="st1" onclick="selectStruct('stack')">Stacks</a></li>
+                <li id="struct2" class="menu"><span id="st2" onclick="selectStruct('queue')">Queue</a></li>
             </ul>
         </div>
         <div id="info">
@@ -27,7 +27,8 @@
             </div>
         </div>
         <script src="js/mainScripts.js">
-            localStorage.setItem("lang","en");        
+            localStorage.setItem("lang","en");
+            localStorage.setItem("content","stack");
         </script>
 
     </body>

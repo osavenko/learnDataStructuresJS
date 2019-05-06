@@ -22,6 +22,7 @@ function selectLanguage(tLang){
             console.log("lngUa:"+lngUa.className);
             break;
     }
+    selectStruct("stack");
 }
 function selectEn(){
     localStorage.setItem("lang", "en");
@@ -46,8 +47,29 @@ function selectUa(){
     h2.innerHTML = "Структура даних - стек";
 }
 
+function uaContent(sStruct){
+
+}
+function enContent(sStruct){
+    switch(sStruct){
+        case "stack":
+            break;
+        case "queue":
+            break;
+    }
+
+}
+function errContent(){
+    console.log("error content");
+}
 function selectStruct(sStruct){
     var valueLang = localStorage.getItem("lang");
     console.log("selected: "+valueLang);
+    if(valueLang==="en"){
 
+    } else if (valueLang==="ua"){
+
+    }else{
+        errContent();
+    }
 }
