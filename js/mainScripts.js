@@ -22,7 +22,7 @@ function selectLanguage(tLang){
             console.log("lngUa:"+lngUa.className);
             break;
     }
-    document.writeln("zzzz^"+localStorage.getItem("content"));
+    
     selectStruct(localStorage.getItem("content"));
 }
 function selectEn(){
@@ -54,6 +54,7 @@ function selectUa(){
 function uaContent(sStruct){
     var iTitle = document.getElementById("infoTitleValue");
     var iContent = document.getElementById("infoContent");
+    console.log("ch:  ----------------------->"+sStruct);
     switch(sStruct){
         case "stack":
             iTitle.innerHTML = "Структура даних стек";
