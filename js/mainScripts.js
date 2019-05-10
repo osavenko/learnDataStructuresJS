@@ -1,7 +1,12 @@
 var stackTitleEn = "Data structure - stack";
 var stackTitleUa = "Структура даних - стек";
+var stackLinkTitleEn = "Learn stack";
+var stackLinkTitleUa = "Вивчати стек";
 var stackInfoEn = "A stack is an ordered collection of items that follows the last in, first out(LIFO) principle.";
 var stackInfoUa = "Стек - це впорядкована колекція елементів, яка дотримується принципу LIFO.";
+var stackLink = "html/stacks.html";
+
+
 
 function selectLanguage(tLang){
     var lngEn = document.getElementById("lang1");
@@ -13,18 +18,12 @@ function selectLanguage(tLang){
             lngUa.classList.remove("menu-selected")
             selectEn();
 
-            console.log("нажатие на language");
-            console.log("lngEn:"+lngEn.className);
-            console.log("lngUa:"+lngUa.className);
             break;
         case 2:
             lngEn.classList.remove("menu-selected");
             lngUa.classList.add("menu-selected");
             selectUa();
 
-            console.log("нажатие на мова");
-            console.log("lngEn:"+lngEn.className);
-            console.log("lngUa:"+lngUa.className);
             break;
     }
     
@@ -53,31 +52,41 @@ function selectUa(){
 function uaContent(sStruct){
     var iTitle = document.getElementById("infoTitleValue");
     var iContent = document.getElementById("infoContent");
+    var iLink = document.getElementById("infoLink");
+
     console.log("ch:  ----------------------->"+sStruct);
     switch(sStruct){
         case "stack":
             iTitle.innerHTML = stackTitleUa;
             iContent.innerHTML = stackInfoUa;
+            iLink.innerHTML = stackLinkTitleUa;
+            iLink.setAttribute('href',stackLink);
             break;
         case "queue":
             iTitle.innerHTML = "Черга";
             iContent.innerHTML = "Черга - це";
-
+            iLink.innerHTML = "Робота з чергою";
+            iLink.setAttribute('href','html/queue.html');
             break;
     }
 }
 function enContent(sStruct){
     var iTitle = document.getElementById("infoTitleValue");
     var iContent = document.getElementById("infoContent");
+    var iLink = document.getElementById("infoLink");
+    
     switch(sStruct){
         case "stack":
             iTitle.innerHTML = stackTitleEn;
             iContent.innerHTML = stackInfoEn;
+            iLink.innerHTML = stackLinkTitleEn;
+            iLink.setAttribute('href',stackLink);
             break;
         case "queue":
             iTitle.innerHTML = "Queue";
             iContent.innerHTML = "Queue it is";
-
+            iLink.innerHTML = "Work whith queue";
+            //iLink.setAttribute('href','html/queue.html');
             break;
     }
 }
